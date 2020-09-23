@@ -1,0 +1,24 @@
+﻿@model Library_Management_UI.Models.Book
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<dl class="row">
+    <dt>@Html.DisplayNameFor(Model => Model.Title)</dt>
+    <dd>@Html.DisplayFor(Model => Model.Title)</dd>
+
+    <dt>@Html.DisplayNameFor(Model => Model.SerialNo)</dt>
+    <dd>@Html.DisplayFor(Model => Model.SerialNo)</dd>
+
+    <dt>@Html.DisplayNameFor(Model => Model.Author)</dt>
+    <dd>@Html.DisplayFor(Model => Model.Author)</dd>
+
+    <dt>@Html.DisplayNameFor(Model => Model.Publisher)</dt>
+    <dd>@Html.DisplayFor(Model => Model.Publisher)</dd>
+
+</dl>
+
+<p>@Html.ActionLink("Back to List","Index","Books")</p>

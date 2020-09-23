@@ -1,0 +1,35 @@
+﻿@model Library_Management_UI.Models.Book
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create New Book</h2>
+
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        @Html.LabelFor(Model => Model.Title)
+        @Html.EditorFor(Model => Model.Title, new { @class = "form-control" })
+        @Html.ValidationMessageFor(Model => Model.Title, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(Model => Model.SerialNo)
+        @Html.EditorFor(Model => Model.SerialNo, new { @class = "form-control" })
+        @Html.ValidationMessageFor(Model => Model.SerialNo, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(Model => Model.Author)
+        @Html.EditorFor(Model => Model.Author, new { @class = "form-control" })
+        
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(Model => Model.Publisher)
+        @Html.EditorFor(Model => Model.Publisher, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Submit"/>
+        @Html.ActionLink("Back to Books", "Index", "Books")
+    </div>
+}
